@@ -1,0 +1,17 @@
+<div>
+<h1>Two way binding works!</h1>
+<ol>
+    <li>
+        <p>USERNAME <input type="text" [(ngModel)]="userName"></p> 
+    </li>
+    <li>
+        {{userName}}
+    </li>
+    <li>
+        <p>PASSWORD <input type="password" [(ngModel)]="password"></p>
+    </li>
+    <li>
+        <button (click)='clear()' style="color:purple;"> Reset</button> - click on reset button username will be empty.
+    </li>
+</ol>
+</div>
