@@ -1,1 +1,29 @@
-<p>asment-structral-derectives works!</p>
+<h2>Structural-directives works!</h2>
+<div style="font-style: italic" >
+    <h2>{{title}}</h2>
+</div>
+<div>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Course Name</th>
+                <th>Skill</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr *ngFor="let course of courses">
+                    <td> {{course.srNo}}</td>
+                    <td> {{course.courseName}}</td>
+                    <td> {{course.skill}}</td>
+                </tr>
+            </tbody>
+        
+    </table>
+</div>
+
+<div>
+    <div>
+        <select></select>
+    </div>
+</div>
