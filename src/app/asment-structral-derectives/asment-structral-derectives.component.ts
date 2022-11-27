@@ -13,6 +13,16 @@ export class AsmentStructralDerectivesComponent implements OnInit {
     { srNo: 2, courseName: 'Data Science', skill: "Python Programming, Predictive Analytics, Machine Learning, Data Visualization,Basic & Advanced SQL"},
     { srNo: 3, courseName: 'Web Development', skill: 'HTML, CSS, Javascript, Object-Oriented Analysis & Design'}
   ]
+  selctedCricketer: string;
+
+  //using ngSwitch
+  getCricterdetails(value){
+    console.log(value.target.value);
+    this.selctedCricketer = value.target.value;
+    
+  }
+
+  
   constructor() { }
 
   ngOnInit() {

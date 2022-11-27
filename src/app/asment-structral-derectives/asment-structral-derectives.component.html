@@ -1,5 +1,5 @@
 <h2>Structural-directives works!</h2>
-<div style="font-style: italic" >
+<div style="font-style: italic">
     <h2>{{title}}</h2>
 </div>
 <div>
@@ -11,19 +11,53 @@
                 <th>Skill</th>
             </tr>
         </thead>
-            <tbody>
-                <tr *ngFor="let course of courses">
-                    <td> {{course.srNo}}</td>
-                    <td> {{course.courseName}}</td>
-                    <td> {{course.skill}}</td>
-                </tr>
-            </tbody>
-        
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td> {{course.srNo}}</td>
+                <td> {{course.courseName}}</td>
+                <td> {{course.skill}}</td>
+            </tr>
+        </tbody>
+
     </table>
 </div>
 
 <div>
     <div>
-        <select></select>
+        <select class="form-control" (change)="getCricterdetails($event)">
+            <option value="Default">please select cricketer</option>
+            <option value="Sachin Tendulkar">Sachin Tendulkar</option>
+            <option value="Virat Kohli">Virat Kohli</option>
+            <option value="Kane Williamson">Kane Williamson</option>
+            <option value="'Ms Dhoni">Ms Dhoni</option>
+            <option value="Yuvraj Singh">Yuvraj Singh</option>
+            <option value="Shane Warne">Shane Warne</option>
+        </select>
     </div>
+        <div class="col-md-12" [ngSwitch]="selctedCricketer">
+            <h2 class="text-success" *ngSwitchDefault>please select cricketer</h2>
+            <div class="text-success" *ngSwitchCase="'Sachin Tendulkar'">
+                <h2>Sachin Tendulkar</h2>
+                <table>
+                   <caption>Personal information</caption> 
+                   <thead>
+                    <tr>
+                        <th>Full name</th>
+                        <th>Born</th>
+                        <th>Nickname</th>
+                        <th>Height</th>
+                        <th>Batting</th>
+                    </tr>
+                   </thead> 
+
+                </table>
+               <p>Tendulkar" redirects here. For other people with the same surname, see Tendulkar (surname).</p>
+            </div>
+            <h2 class="text-success" *ngSwitchCase="'Virat Kohli'">Virat Kohli</h2>
+            <h2 class="text-success" *ngSwitchCase="'Kane Williamson'">Kane Williamson</h2>
+            <h2 class="text-success" *ngSwitchCase="'Ms Dhoni'">Ms Dhoni</h2>
+            <h2 class="text-success" *ngSwitchCase="'Yuvraj Singh'">Yuvraj Singh</h2>
+            <h2 class="text-success" *ngSwitchCase="'Shane Warne'">Shane Warne</h2>
+        </div>
+
 </div>

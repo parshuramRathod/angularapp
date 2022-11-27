@@ -11,6 +11,7 @@ import { NgswitchComponent } from './ngswitch/ngswitch.component';
 import { AssignmentDataBindingComponent } from './assignment-data-binding/assignment-data-binding.component';
 import { DemodirectivesComponent } from './demodirectives/demodirectives.component';
 import { AsmentStructralDerectivesComponent } from './asment-structral-derectives/asment-structral-derectives.component';
+import { PracticeComponent } from './practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AsmentStructralDerectivesComponent } from './asment-structral-derective
     NgswitchComponent,
     AssignmentDataBindingComponent,
     DemodirectivesComponent,
-    AsmentStructralDerectivesComponent
+    AsmentStructralDerectivesComponent,
+    PracticeComponent
   ],
   imports: [
     BrowserModule,
