@@ -16,3 +16,17 @@
 <p>Normal para</p>
 <p appCustdir>Custom para</p>
 
+<!-- Once user input value then that value should be displayed on html page -->
+<!-- <div style= "text-align: center">
+    <input type="text" (keyup.enter)="show($event)">
+</div>
+{{uName}} -->
+<!-- another way to crate user input story by using template reference variable -->
+<div>
+<input type="text" #uusername>
+</div>
+<button (click)="show(uusername.value)">Show</button>
+<div>
+    {{username}}
+</div>
+

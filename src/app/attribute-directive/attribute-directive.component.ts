@@ -10,6 +10,8 @@ export class AttributeDirectiveComponent implements OnInit {
 
   colorVal  = 'blue';
 
+  uName;
+
   people:any[] = [
     {
       "name": "Jack",
@@ -32,6 +34,18 @@ export class AttributeDirectiveComponent implements OnInit {
       "country": "USA"
     }
   ]
+//   show(value){
+//     this.uName = value.target.value;
+// console.log(value.target.value);
+
+
+//   }
+
+  username;
+
+  show(value){
+    this.username = value;
+  }
 
   constructor() { }
 

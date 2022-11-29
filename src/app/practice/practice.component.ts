@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-practice',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./practice.component.css']
 })
 export class PracticeComponent implements OnInit {
+  // this is  child component
+  @Input() myInputMsg: string;
 
   constructor() { }
 
   ngOnInit() {
+    console.log('form parent ',this.myInputMsg );
+    
   }
 
 }
