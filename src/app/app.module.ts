@@ -18,6 +18,7 @@ import { PasswordConfirmComponent } from './password-confirm/password-confirm.co
 import { ParentCompComponent } from './parent-comp/parent-comp.component';
 import { ChildCompComponent } from './child-comp/child-comp.component';
 import { Practice1Component } from './practice1/practice1.component';
+import { AsmenttchildToParentComponent } from './asmenttchild-to-parent/asmenttchild-to-parent.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { Practice1Component } from './practice1/practice1.component';
     PasswordConfirmComponent,
     ParentCompComponent,
     ChildCompComponent,
-    Practice1Component
+    Practice1Component,
+    AsmenttchildToParentComponent
   ],
   imports: [
     BrowserModule,

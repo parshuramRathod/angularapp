@@ -15,12 +15,23 @@
 <div >
 <app-child-comp (foodevent)="getDataFromChild($event)"></app-child-comp> -->
 
-<ul *ngFor="let i of foodss">
+<!-- <ul *ngFor="let i of foodss">
   <li>
     {{i}}
   </li>
 </ul>
-<app-practice1 (foodEvent)="getDataFormFood($event)"></app-practice1>
+<app-practice1 (foodEvent)="getDataFormFood($event)"></app-practice1> -->
+<!-- <div *ngFor="let element of Student">
+  <app-parent-comp [Student]="element"></app-parent-comp>
+</div> -->
+
+<div>
+  <app-asmenttchild-to-parent (cityName)="getDataOfCity($event)"></app-asmenttchild-to-parent>
+</div>
+<div *ngFor="let cityName of City">
+  {{cityName}}
+</div>
+
 <!-- <app-password-confirm></app-password-confirm> -->
 <!-- <app-ngswitch></app-ngswitch>   -->
 <!-- <app-assignment-data-binding></app-assignment-data-binding> -->

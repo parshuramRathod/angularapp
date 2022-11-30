@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-parent-comp',
@@ -6,18 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-comp.component.css']
 })
 export class ParentCompComponent implements OnInit {
-Student:any[]=[
-  {
-    stdName : "Parshuram",
-    stdCollage : "VVPIET solapur",
-    stdRollNo: 27,
-    stdBranch: "Electrical and Electronics Engg."
-
-  }
-]
+@Input() Student:any;
   constructor() { }
 
   ngOnInit() {
+  console.log(this.Student);
   
   }
 

@@ -6,12 +6,14 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./practice1.component.css']
 })
 export class Practice1Component implements OnInit {
-@Output() foodEvent : EventEmitter<string> = new EventEmitter<string>();
-  constructor() { }
+// @Output() foodEvent : EventEmitter<string> = new EventEmitter<string>();
+  
+
+constructor() { }
 
   ngOnInit() {
   }
-  addFood(value){
-    this.foodEvent.emit(value);
-  }
+  // addFood(value){
+  //   this.foodEvent.emit(value);
+  // }
 }
