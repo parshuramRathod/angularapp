@@ -15,6 +15,9 @@ import { PracticeComponent } from './practice/practice.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
 import { CustdirDirective } from './custdir.directive';
 import { PasswordConfirmComponent } from './password-confirm/password-confirm.component';
+import { ParentCompComponent } from './parent-comp/parent-comp.component';
+import { ChildCompComponent } from './child-comp/child-comp.component';
+import { Practice1Component } from './practice1/practice1.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { PasswordConfirmComponent } from './password-confirm/password-confirm.co
     PracticeComponent,
     AttributeDirectiveComponent,
     CustdirDirective,
-    PasswordConfirmComponent
+    PasswordConfirmComponent,
+    ParentCompComponent,
+    ChildCompComponent,
+    Practice1Component
   ],
   imports: [
     BrowserModule,
