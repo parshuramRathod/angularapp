@@ -6,13 +6,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./asmenttchild-to-parent.component.css']
 })
 export class AsmenttchildToParentComponent implements OnInit {
- @Output() cityName : EventEmitter<string> = new EventEmitter<string>();
+ @Output() crickDetails : EventEmitter<string> = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit() {
   }
-  City(value){
-this.cityName.emit(value);
+  Cricketer(value){
+this.crickDetails.emit(value);
 
   }
 }

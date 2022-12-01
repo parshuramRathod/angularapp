@@ -26,10 +26,30 @@
 </div> -->
 
 <div>
-  <app-asmenttchild-to-parent (cityName)="getDataOfCity($event)"></app-asmenttchild-to-parent>
+  <app-asmenttchild-to-parent (crickDetails)="getDataOfCricketer($event)"></app-asmenttchild-to-parent>
 </div>
-<div *ngFor="let cityName of City">
-  {{cityName}}
+<div>
+  <table class="table table-striped" class="table table-bordered" style="text-align: center;">
+    <thead>
+      <tr>
+      <th>Name</th>
+      <th>Total Match</th>
+      <th>Total Score</th>
+      <th>Hundred scored</th>
+      <th>Highest Score</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr *ngFor="let crickDetails of Cricketer">
+        <td>{{crickDetails.cicketerName}}</td>
+        <td>{{crickDetails.totalMatch}}</td>
+        <td>{{crickDetails.totalscore}}</td>
+        <td>{{crickDetails.hundreadScore}}</td>
+        <td>{{crickDetails.highestScore}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
 </div>
 
 <!-- <app-password-confirm></app-password-confirm> -->
@@ -54,5 +74,15 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
+
+<!-- life cycle hooks -->
+<!-- <select (change)="uid = sid.value"#sid>
+<option selected disabled>No value selected</option>
+<option [value]="" *ngFor="let id of [1,2,3,4]">
+  {{id}}
+</option>
+
+</select>
+<app-hooks [userId]="uid"></app-hooks> -->
 
 <router-outlet></router-outlet>

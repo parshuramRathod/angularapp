@@ -19,6 +19,7 @@ import { ParentCompComponent } from './parent-comp/parent-comp.component';
 import { ChildCompComponent } from './child-comp/child-comp.component';
 import { Practice1Component } from './practice1/practice1.component';
 import { AsmenttchildToParentComponent } from './asmenttchild-to-parent/asmenttchild-to-parent.component';
+import { HooksComponent } from './hooks/hooks.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AsmenttchildToParentComponent } from './asmenttchild-to-parent/asmenttc
     ParentCompComponent,
     ChildCompComponent,
     Practice1Component,
-    AsmenttchildToParentComponent
+    AsmenttchildToParentComponent,
+    HooksComponent
   ],
   imports: [
     BrowserModule,
