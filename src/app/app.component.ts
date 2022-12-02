@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -79,6 +80,21 @@ export class AppComponent {
 
   //lifecycle hooks
   public uid: number;
+  data;
+  name: string;
+  price: number;
+  product: Product = new Product();
+ 
+
+  //docheck
+  handleData(value) {
+    this.data = value.target.value;
+  }
+  updateProduct() {
+    // this.product = new Product();
+    this.product.name = this.name;
+    this.product.price = this.price;
+  }
 
   
 

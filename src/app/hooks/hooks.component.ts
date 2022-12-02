@@ -1,12 +1,15 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Product } from '../models/product';
 
 @Component({
   selector: 'app-hooks',
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
 })
-export class HooksComponent implements OnInit, OnChanges {
+export class HooksComponent implements OnInit, OnChanges, DoCheck {
   @Input() userId: number;
+  @Input() parentData: string;
+  @Input() product: Product;
   pi;
 
   constructor() {
@@ -14,8 +17,11 @@ export class HooksComponent implements OnInit, OnChanges {
     console.log('HooksComponent constructor called ');
 
   }
+  ngDoCheck(): void {
+    console.log('ngDoCheck called');
+  }
 
-
+//ngOnchange
   ngOnChanges(changes: SimpleChanges): void {
     for (const propName in changes) {
       const prop = changes[propName]

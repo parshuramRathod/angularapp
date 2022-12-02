@@ -25,7 +25,7 @@
   <app-parent-comp [Student]="element"></app-parent-comp>
 </div> -->
 
-<div>
+<!-- <div>
   <app-asmenttchild-to-parent (crickDetails)="getDataOfCricketer($event)"></app-asmenttchild-to-parent>
 </div>
 <div>
@@ -50,8 +50,8 @@
     </tbody>
   </table>
   
-</div>
-
+</div> -->
+<app-asmentdirecive></app-asmentdirecive>
 <!-- <app-password-confirm></app-password-confirm> -->
 <!-- <app-ngswitch></app-ngswitch>   -->
 <!-- <app-assignment-data-binding></app-assignment-data-binding> -->
@@ -84,5 +84,16 @@
 
 </select>
 <app-hooks [userId]="uid"></app-hooks> -->
+
+<div class="row" style="text-align:center;">
+  <div class="col-md-12">
+<input type="text" placeholder="enter value" (blur)="handleData($event)">
+
+<p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
+<p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
+<button class="btn btn-primary" (click)="updateProduct()">Update product</button>
+<app-hooks [userId]="uid" [parentData]="data" [product]="product"></app-hooks>
+</div>
+</div>
 
 <router-outlet></router-outlet>
