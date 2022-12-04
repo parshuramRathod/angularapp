@@ -7,8 +7,15 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class Practice1Component implements OnInit {
 // @Output() foodEvent : EventEmitter<string> = new EventEmitter<string>();
-  
+  addName:string;
+  add:any[]=[];
+addPassenger(values){
+this.add.push({addName:values});
+}
 
+removeData(value){
+this.add.splice(value,1)
+}
 constructor() { }
 
   ngOnInit() {
@@ -16,4 +23,7 @@ constructor() { }
   // addFood(value){
   //   this.foodEvent.emit(value);
   // }
+
+
+
 }
