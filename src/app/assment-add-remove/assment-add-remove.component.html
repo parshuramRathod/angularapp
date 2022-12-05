@@ -2,10 +2,6 @@
 <div class="container">
 
         <input  [(ngModel)]="addName" #enter type="text" placeholder="Name">
-        <!-- <input [(ngModel)]="addAge" #enter type="text" placeholder="Age"><br> -->
-
-
-    
     <div style="margin: 20px ">
         <button type="button" class="btn btn-primary" (click)="addPassenger(enter.value)">Add passenger</button>
     </div>
@@ -17,10 +13,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let nme of add">
+            <tr *ngFor="let nme of add; index as count">
+                <td>{{count+1}}</td>
                 <td> {{nme.addName}}</td>
                 <td>
-                    <button (click)="removeData(value)" class=" btn btn-sm btn-warning">Remove</button>
+                    <button (click)="removeData(count)" class=" btn btn-sm btn-warning">Remove</button>
                 </td>
             </tr>
         </tbody>

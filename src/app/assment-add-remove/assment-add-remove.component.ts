@@ -12,8 +12,8 @@ addPassenger(values){
 this.add.push({addName:values});
 }
 
-removeData(value){
-this.add.splice(value,1)
+removeData(nme){
+this.add.splice(nme,1)
 }
   constructor() { }
 

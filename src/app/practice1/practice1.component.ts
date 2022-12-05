@@ -6,17 +6,17 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./practice1.component.css']
 })
 export class Practice1Component implements OnInit {
-// @Output() foodEvent : EventEmitter<string> = new EventEmitter<string>();
-  addName:string;
-  add:any[]=[];
-addPassenger(values){
-this.add.push({addName:values});
-}
+  // @Output() foodEvent : EventEmitter<string> = new EventEmitter<string>();
+  playerName: string;
+  addPlayer: any[] = [];
+  playerList(value1) {
+    this.addPlayer.push({ playerName: value1 })
+  }
+  remove(playerName) {
+    this.addPlayer.splice(playerName, 1)
+  }
 
-removeData(value){
-this.add.splice(value,1)
-}
-constructor() { }
+  constructor() { }
 
   ngOnInit() {
   }

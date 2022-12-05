@@ -1,34 +1,24 @@
-<h1>Add Passenger details </h1>
 <div class="container">
-
-        <input  [(ngModel)]="addName" #enter type="text" placeholder="Name">
-        <!-- <input [(ngModel)]="addAge" #enter type="text" placeholder="Age"><br> -->
-
-
-    
-    <div style="margin: 20px ">
-        <button type="button" class="btn btn-primary" (click)="addPassenger(enter.value)">Add passenger</button>
+    <h1>Add player</h1>
+    <div>
+        <input type="text" #playerInput> <br>
+        <button (click)="playerList(playerInput.value)" class="btn btn-primary"
+            style="border: rgb(211, 189, 189) 3px solid;width:150px;">add</button>
     </div>
-    <table class="table table-striped" class="table align-middle">
-        <thead class="table-light">
+    <table class="table table-bordered" style="color: white;">
+        <thead>
             <tr>
-                <th>Name</th>
-                <th>Remove Item</th>
+                <th>SrNO</th>
+                <th>Player Name</th>
+                <th>Remove</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let nme of add">
-                <td> {{nme.addName}}</td>
-                <td>
-                    <button (click)="removeData(value)" class=" btn btn-sm btn-warning">Remove</button>
-                </td>
+            <tr *ngFor="let plyname of addPlayer;index as playerInput">
+                <td>{{playerInput+1}}</td>
+                <td>{{plyname.playerName}}</td>
+                <td><button (click)="remove(playerInput)">remove</button></td>
             </tr>
         </tbody>
     </table>
-
-
 </div>
-
-<!-- <div>
-    <input type="text" (keyup.enter)="addFood(item.value)" #item>
-</div> -->
