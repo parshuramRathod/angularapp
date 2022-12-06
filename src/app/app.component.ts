@@ -79,6 +79,7 @@ export class AppComponent {
   }
 
   //lifecycle hooks
+  public mobId: number;
   public uid: number;
   data:string = 'red';
   name: string;

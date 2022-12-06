@@ -22,6 +22,7 @@ import { AsmenttchildToParentComponent } from './asmenttchild-to-parent/asmenttc
 import { HooksComponent } from './hooks/hooks.component';
 import { AsmentdireciveComponent } from './asmentdirecive/asmentdirecive.component';
 import { AssmentAddRemoveComponent } from './assment-add-remove/assment-add-remove.component';
+import { Practice3Component } from './practice3/practice3.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AssmentAddRemoveComponent } from './assment-add-remove/assment-add-remo
     AsmenttchildToParentComponent,
     HooksComponent,
     AsmentdireciveComponent,
-    AssmentAddRemoveComponent
+    AssmentAddRemoveComponent,
+    Practice3Component
   ],
   imports: [
     BrowserModule,
