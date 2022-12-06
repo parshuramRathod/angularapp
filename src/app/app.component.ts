@@ -80,7 +80,7 @@ export class AppComponent {
 
   //lifecycle hooks
   public uid: number;
-  data;
+  data:string = 'red';
   name: string;
   price: number;
   product: Product = new Product();
