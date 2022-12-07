@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { Product } from '../models/product';
 
 @Component({
@@ -6,7 +6,8 @@ import { Product } from '../models/product';
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
 })
-export class HooksComponent implements OnInit, OnChanges, DoCheck,AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+export class HooksComponent implements OnInit, OnChanges, DoCheck,AfterContentInit, AfterContentChecked, 
+AfterViewInit, AfterViewChecked, OnDestroy {
   @Input() userId: number;
   @Input() parentData: string;
   @Input() product: Product;
@@ -14,10 +15,17 @@ export class HooksComponent implements OnInit, OnChanges, DoCheck,AfterContentIn
   @ViewChild("childHook",{static:false}) viewChild:ElementRef
 
   pi;
+  counter;
+  num:number = 1;
 
   constructor() {
     this.pi = 3.14;
     console.log('HooksComponent constructor called ');
+    
+  }
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy called');
+    clearInterval(this.counter);
     
   }
 
@@ -43,7 +51,7 @@ export class HooksComponent implements OnInit, OnChanges, DoCheck,AfterContentIn
     console.log('view int access', this.viewChild);
 
   //  this.contentChild.nativeElement.setAttribute('style', 'color:green');
-  // this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`); 
+  // this.contentChild.nativeElement.setAttribute('style', `color:${this.parentData}`);   
   }
   ngDoCheck(): void {
     console.log('ngDoCheck called');
@@ -66,7 +74,10 @@ export class HooksComponent implements OnInit, OnChanges, DoCheck,AfterContentIn
 
   ngOnInit() {
     console.log("HooksComponent ngOnInit called");
-
+    this.counter = setInterval(() => {
+      this.num = this.num + 1 ;
+      console.log(this.num);// api}, 1000)
+    },1000)
   }
 
 }

@@ -97,6 +97,9 @@ export class AppComponent {
     this.product.price = this.price;
   }
 
-  
+  appchildExist: boolean = true;
+  destroy() {
+    this.appchildExist = false;
+  }
 
 }
