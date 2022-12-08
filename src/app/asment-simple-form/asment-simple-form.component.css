@@ -1,0 +1,19 @@
+.container{
+background-color: rgb(88, 214, 214);
+color: black;
+font-size: larger;
+font-style: italic;
+margin-bottom: 10px;
+font-weight: bold;
+}
+input.ng-invalid.ng-touched{
+    border: 2px solid rgb(238, 34, 34);
+
+}
+input,select{
+    box-shadow:2px 3px 4px inset;
+}
+h1,h2{
+    text-align: center;
+    color: blue;
+}

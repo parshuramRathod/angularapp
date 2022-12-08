@@ -1,4 +1,6 @@
+import { NgForOf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-asment-simple-form',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsmentSimpleFormComponent implements OnInit {
 
+  onSubmit(studentForm:NgForm){
+    console.log(studentForm);
+  }
   constructor() { }
 
   ngOnInit() {
