@@ -101,5 +101,19 @@ export class AppComponent {
   destroy() {
     this.appchildExist = false;
   }
+  pName:string;
+  pValue:number;
+  productData: string;
+
+  dataHandle(value){
+    this.productData = value.target.value;
+  }
+
+  dataUpadate(){
+    this.product= new Product();
+    this.product.name =this.name;
+    this.product.price= this.price;
+
+  }
 
 }

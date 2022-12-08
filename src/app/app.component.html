@@ -81,10 +81,10 @@
 <option [value]="" *ngFor="let id of [1,2,3,4]">
   {{id}}
 </option>
-</select>
-<app-hooks [userId]="uid"></app-hooks> -->
+</select> -->
+<!-- <app-hooks [userId]="uid"></app-hooks> -->
 
-<div class="row" style="text-align:center;">
+<!-- <div class="row" style="text-align:center;">
   <div class="col-md-12">
 <input type="text" placeholder="enter value" (blur)="handleData($event)">
 
@@ -96,15 +96,22 @@
 </app-hooks>
 </div>
 </div>
-<button class="btn btn-danger" (click)="destroy()">Destroy component</button>
+<button class="btn btn-danger" (click)="destroy()">Destroy component</button> -->
 <!-- <app-practice1></app-practice1> -->
 
 <!-- <app-assment-add-remove></app-assment-add-remove> -->
 
-<!-- <app-practice3 [mobileId]="mobId">
+<!-- <app-practice3 [mobileId]="mobId" [parentProductdata]="productData" [product]="product">
   <select style="margin-left: 400px;" (change)="mobId = mobRef.value" #mobRef>
   <option selected disabled>No Value selected</option>
   <option [value]="" *ngFor="let id of [1,2,3,4,5]">{{id}}</option> 
 </select>
+<input type="text" (blur)="dataHandle($event)">
+<p>PoductName<input type="text" placeholder="enter product" [(ngModel)]="pName"></p>
+<p>PorductValue <input type="text" placeholder="enter value" [(ngModel)]="pvalue"></p>
+<button class="btn btn-primary" (click)="dataUpadate()" >Product Update</button>
+
 </app-practice3> -->
+
+<app-simpleform></app-simpleform>
 <router-outlet></router-outlet>

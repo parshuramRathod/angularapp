@@ -23,6 +23,8 @@ import { HooksComponent } from './hooks/hooks.component';
 import { AsmentdireciveComponent } from './asmentdirecive/asmentdirecive.component';
 import { AssmentAddRemoveComponent } from './assment-add-remove/assment-add-remove.component';
 import { Practice3Component } from './practice3/practice3.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
+import { AsmentSimpleFormComponent } from './asment-simple-form/asment-simple-form.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { Practice3Component } from './practice3/practice3.component';
     HooksComponent,
     AsmentdireciveComponent,
     AssmentAddRemoveComponent,
-    Practice3Component
+    Practice3Component,
+    SimpleformComponent,
+    AsmentSimpleFormComponent
   ],
   imports: [
     BrowserModule,
