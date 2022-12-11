@@ -8,70 +8,90 @@
             <form (ngSubmit)="onSubmit(studentForm)" #studentForm="ngForm">
                 <div class="row g-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="First name" name="First name" ngModel required>
+                        <input type="text" class="form-control" placeholder="First name" name="Firstname"
+                            [(ngModel)]="FirstName" required>
+                        <small *ngIf="FirstName">User name is a: {{FirstName}}</small>
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name" name="Last name" ngModel required>
+                        <input type="text" class="form-control" placeholder="Last name" name="Lastname"
+                            [(ngModel)]="lastName" required>
+                        <small *ngIf="lastName">User Last name is a: {{lastName}}</small>
                     </div>
                 </div>
+                <div ngModelGroup="studentDetails" #studentDetails="ngModelGroup">
                 <div class="col-12">
                     <label class="form-label">Date of Birth</label>
-                    <input type="date" class="form-control" name="Date of Birth" ngModel required>
+                    <input type="date" class="form-control" name="DateofBirth" ngModel required>
                 </div>
-                <fieldset class="row mb-3">
-                    <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-                    <div class="col-sm-10">
-                        <div class="form-check" required>
-                            <input class="form-check-input" type="radio" name="exampleRadios">
-                            <label class="form-check-label">Male</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios">
-                            <label class="form-check-label">Female</label>
-                        </div>
-                    </div>
-                </fieldset>
+                <div class="col-auto">
+                    <label>Gender</label>
+                    <select class="form-select" name="gender" ngModel>
+                        <option selected>Choose gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
                 <div class="col-12">
                     <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address" ngModel required>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address"
+                        ngModel required>
                 </div>
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" email placeholder="abc@gmail.com" name="email" ngModel required>
+                    <input type="email" class="form-control" email placeholder="abc@gmail.com" name="email"
+                        #email="ngModel" ngModel required>
+                    <small class="text-danger" *ngIf="!email.valid && email.touched">Enter a valid email</small>
                 </div>
                 <div class="col-auto">
                     <label>School</label>
-                    <select class="form-select">
+                    <select class="form-select" name="School" [ngModel]="defaultSchool">
                         <option selected>Choose...</option>
-                        <option value="1">SCC</option>
-                        <option value="2">HSC</option>
+                        <option value="SSC">SCC</option>
+                        <option value="HSC">HSC</option>
                     </select>
                 </div>
                 <div class="col-auto">
                     <label>Department</label>
-                    <select class="form-select" name="Department" ngModel required>
-                        <option selected>Choose...</option>
-                        <option value="1">Civil</option>
-                        <option value="2">Electrical and Electronics</option>
-                        <option value="3">Computer and Science</option>
+                    <select class="form-select" name="Department" [ngModel]="defaultDepartment">
+                        <option>Choose...</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Electrical and Electronics">Electrical and Electronics</option>
+                        <option value="Computer and Science">Computer and Science</option>
                     </select>
                 </div>
                 <div class="col-auto">
                     <label>Course</label>
-                    <select class="form-select" name="course" ngModel required>
-                        <option selected>Choose...</option>
-                        <option value="1">Engineering</option>
-                        <option value="2">Law</option>
-                        <option value="3">Medical</option>
+                    <select class="form-select" name="course" [ngModel]="defaultCourse">
+                        <option>Choose...</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Law">Law</option>
+                        <option value="Medical">Medical</option>
                     </select>
                 </div>
                 <div class="col-12">
                     <label class="form-label">Mobile No.</label>
-                    <input type="number" class="form-control" maxlength="10" placeholder="mobile no." name="mob no." ngModel required>
+                    <input type="number" class="form-control" maxlength="10" placeholder="mobile no." name="mobNo"
+                        ngModel required>
                 </div>
-                <button type="submit" [disabled]="!studentForm.valid" class="btn btn-primary">Submit</button>
+            </div>
+                <button type="submit"  class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-primary">Reset</button>
             </form>
+            <div class="row justify-content-center mt-2" *ngIf="submitted">
+                <div class="col-md-22 rounded shadow py-4">
+                    <h2>Student data</h2>
+                    <p>Student first name is : <strong>{{student.firstName}}</strong></p>
+                    <p>Student last Name is : <strong>{{student.lastName}}</strong></p>
+                    <p>Student Date of birth is : <strong>{{student.dateOfBirth}}</strong> </p>
+                    <p>Student gender : <strong>{{student.gender}}</strong> </p>
+                    <p>Student Address is : <strong>{{student.address}}</strong> </p>
+                    <p>Student Mail Id is : <strong>{{student.email}}</strong> </p>
+                    <p>Student school is : <strong>{{student.school}}</strong> </p>
+                    <p>Student Department is : <strong>{{student.department}}</strong> </p>
+                    <p>Student course is : <strong>{{student.course}}</strong> </p>
+                    <p>Student Mobile No is : <strong>{{student.mobileNo}}</strong></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

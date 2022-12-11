@@ -1,20 +1,31 @@
-.container{
-background-color: rgb(88, 214, 214);
-color: black;
-font-size: larger;
-font-style: italic;
-margin-bottom: 10px;
-font-weight: bold;
+.container {
+    /* background-color: rgb(88, 214, 214); */
+    background-image: url(https://media.istockphoto.com/id/1013435204/photo/businessman-filling-online-registration-form.jpg?s=612x612&w=0&k=20&c=OqVxHQngPfPHNV9baIcqChpiL7Iv5G86bK5Pg0urbTc=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: navy;
+    font-size: larger;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 30px;
 
 }
-input.ng-invalid.ng-touched{
+
+input.ng-invalid.ng-touched {
     border: 2px solid rgb(238, 34, 34);
+    color: black;
 
 }
-input,select{
-    box-shadow:2px 3px 4px inset;
+
+input,
+select {
+    box-shadow: 2px 3px 4px inset;
 }
-h1,h2{
+
+h1,
+h2 {
     text-align: center;
-    color: blue;
+    color: #000033;
+    font-weight: bold;
 }

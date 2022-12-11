@@ -18,15 +18,18 @@ export class SimpleformComponent implements OnInit {
   }
   OnSubmit(form:NgForm) {
     this.submitted = true;
-    this.employee .course = form.value.course;
-    this.employee .userName = form.value.userDetails.username;
-    this.employee .email = form.value.userDetails.email;
+    this.employee.course = form.value.course;
+    this.employee.userName = form.value.userDetails.username;
+    this.employee.email = form.value.userDetails.email;
 
    this.saveEmployeeData(this.employee);
   }
 
   saveEmployeeData(emp:Employee) {
+    console.log(emp.userName);
    console.log(emp.course);
+   console.log(emp.email);
+   
   }
 
 }
