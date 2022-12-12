@@ -8,9 +8,14 @@ import { Employee } from '../models/employee';
   styleUrls: ['./simpleform.component.css']
 })
 export class SimpleformComponent implements OnInit {
-  defaultValue:string= "Angular"
+  defaultValue:string= "Angular";
   employee = new Employee();
   submitted: boolean = false;
+  defaultGender:string= "Male";
+  genders=[
+    {id:'1',value:'Male'},
+    {id:'2',value:'Female'}
+  ]
 
   constructor() { }
 
@@ -21,6 +26,11 @@ export class SimpleformComponent implements OnInit {
     this.employee.course = form.value.course;
     this.employee.userName = form.value.userDetails.username;
     this.employee.email = form.value.userDetails.email;
+    this.employee.gender = form.value.gender;
+    form.reset();
+    form.controls['course'].setValue("Angular");
+    form.controls['gender'].setValue("Male")   
+
 
    this.saveEmployeeData(this.employee);
   }

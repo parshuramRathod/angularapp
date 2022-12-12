@@ -26,6 +26,16 @@
                         <option value="JavaScript">JavaScript</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                        <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender" class="custom-control-input">
+                        <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" name="DateofBirth" min="2022-12-10" ngModel required>
+                    </div>
+                </div>
                
                 <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
               </form>
@@ -35,6 +45,7 @@
                     <p>Username: <strong>{{employee.userName}}</strong></p>
                     <p>Email: <strong>{{employee.email}}</strong></p>
                     <p>Course: <strong>{{employee.course}}</strong></p>
+                    <p>Gender: <strong>{{employee.gender}}</strong></p>
                 </div>
          </div>
 
