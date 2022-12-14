@@ -1,0 +1,13 @@
+input.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+.container{
+    background-color: pink;
+    font-style: italic;
+    font-weight: bold;
+    font-size: x-large;
+}
+h1{
+    text-align: center;
+}

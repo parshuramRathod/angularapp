@@ -26,6 +26,7 @@ import { Practice3Component } from './practice3/practice3.component';
 import { SimpleformComponent } from './simpleform/simpleform.component';
 import { AsmentSimpleFormComponent } from './asment-simple-form/asment-simple-form.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { AsmentReactiveFormComponent } from './asment-reactive-form/asment-reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     Practice3Component,
     SimpleformComponent,
     AsmentSimpleFormComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    AsmentReactiveFormComponent
   ],
   imports: [
     BrowserModule,
