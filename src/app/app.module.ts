@@ -27,6 +27,7 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
 import { AsmentSimpleFormComponent } from './asment-simple-form/asment-simple-form.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { AsmentReactiveFormComponent } from './asment-reactive-form/asment-reactive-form.component';
+import { AssmentRegistrationFormTDFComponent } from './assment-registration-form-tdf/assment-registration-form-tdf.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AsmentReactiveFormComponent } from './asment-reactive-form/asment-react
     SimpleformComponent,
     AsmentSimpleFormComponent,
     ReactiveformComponent,
-    AsmentReactiveFormComponent
+    AsmentReactiveFormComponent,
+    AssmentRegistrationFormTDFComponent
   ],
   imports: [
     BrowserModule,

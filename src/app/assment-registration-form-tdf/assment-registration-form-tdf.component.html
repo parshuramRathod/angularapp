@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-4">
+            <h3>Registration form using Template driven form!</h3>
+
+            <form (ngSubmit)="OnSubmit(myRegForm)" #myRegForm="ngForm">
+                <div ngModelGroup="myRegistrationForm" #myRegistrationForm="ngModelGroup">
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" minlength="5" maxlength="5" name="firstname" [(ngModel)]="firstname" placeholder="Enter First Name" required>
+                        <small *ngIf="submitted">First name is :{{firstname}} </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" name="lastname" id="lastname" maxlength="10" [(ngModel)]="lastname" placeholder="Enter last name">
+                        <small *ngIf="submitted">Last name is:{{lastname}} </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="bDate">Birthdate</label>
+                        <input type="date" name="birthdate" id="bDate" ngModel>
+                    </div>
+                    <div class="from-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" email #email="ngModel" ngModel pattern="^[a-zA-Z0-9]+@gmail\.[a-zA-z]+$" placeholder="Only @gmail mail id is valid" required>
+                   <small class="text-danger" *ngIf="!email.valid && email.touched">please enter valid email</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobNo">Mobile Numeber</label>
+                        <input type="text" name="mobno" id="mobNo" maxlength="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Select City</label>
+                        <select class="form-control" name="city" id="city" [ngModel]="defaultValue">
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Delhi">Delhi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                            <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="defaultGender" class="custom-control-input">
+                            <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>  
+                        <input type="password" name="password" id="password" ngModel>
+                    </div>
+                    <div class="form-group" >
+                        <label for="Confirm Password">Confirm Password</label>
+                        <input type="password" name="confirmpassword" id="confirmpassword">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success">submit</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
