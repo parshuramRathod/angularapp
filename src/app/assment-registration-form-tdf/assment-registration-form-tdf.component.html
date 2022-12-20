@@ -2,7 +2,6 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-4">
             <h3>Registration form using Template driven form!</h3>
-
             <form (ngSubmit)="OnSubmit(myRegForm)" #myRegForm="ngForm">
                 <div ngModelGroup="myRegistrationForm" #myRegistrationForm="ngModelGroup">
                     <div class="form-group">
@@ -26,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label for="mobNo">Mobile Numeber</label>
-                        <input type="text" name="mobno" id="mobNo" maxlength="10">
+                        <input type="text" name="mobno" id="mobNo" maxlength="10" ngModel>
                     </div>
                     <div class="form-group">
                         <label for="city">Select City</label>
@@ -49,11 +48,23 @@
                     </div>
                     <div class="form-group" >
                         <label for="Confirm Password">Confirm Password</label>
-                        <input type="password" name="confirmpassword" id="confirmpassword">
+                        <input type="password" name="confirmpassword" id="confirmpassword" ngModel>
                     </div>
 
 
                     <button type="submit" class="btn btn-success">submit</button>
+                </div>
+                <div class="row justify-content-center mt-6" *ngIf="submitted">
+                    <div class="col-md-6 rounded shadow py-4">
+                        <small>Student First name is : <strong>{{user.firstName}} </strong></small>
+                        <small>Student Last name is : <strong>{{user.lastName}} </strong></small>
+                        <small>Student Gender is : <strong>{{user.gender}} </strong></small>  
+                        <small>Student Birthdate  is : <strong>{{user.dateOfBirth}} </strong></small>
+                        <small>Student Email address is : <strong>{{user.email}} </strong></small>  
+                        <small>Student Mobile Number is : <strong>{{user.mobileNo}} </strong></small>  
+                        <small>Student city is : <strong>{{user.city}} </strong></small>  
+
+                    </div>
                 </div>
 
             </form>

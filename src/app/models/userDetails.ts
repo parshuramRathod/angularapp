@@ -1,4 +1,7 @@
 export class User{
+    firstname(firstname: any) {
+      throw new Error('Method not implemented.');
+    }
     firstName:string;
     lastName:string;
     dateOfBirth:number;
@@ -6,6 +9,8 @@ export class User{
     address:string;
     email:any;
     city:string;
-    mobileNo:number
+    mobileNo:number;
+    password:any;
+    confirmpassword:any;
 
 }

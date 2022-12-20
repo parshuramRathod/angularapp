@@ -22,6 +22,8 @@ export class SimpleformComponent implements OnInit {
   ngOnInit() {
   }
   OnSubmit(form:NgForm) {
+    console.log(form);
+    
     this.submitted = true;
     this.employee.course = form.value.course;
     this.employee.userName = form.value.userDetails.username;
