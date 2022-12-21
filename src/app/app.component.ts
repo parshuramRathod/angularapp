@@ -1,12 +1,28 @@
-import { Component } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
 import { Product } from './models/product';
+import { DemoservicesService } from './services/demoservices.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private _demoService:DemoservicesService){
+
+  }
+ngOnInit(): void {
+  this._demoService.getUserData().subscribe(data =>{
+    console.log('getting data from api',data);
+    
+  })
+  this._demoService.getDataPosts().subscribe(results =>{
+    console.log('getting data from api',results);
+    
+  })
+}
+
   title = 'angularapp';
   //parent component
   uname= 'I am from practice component';

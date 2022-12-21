@@ -28,6 +28,13 @@ import { AsmentSimpleFormComponent } from './asment-simple-form/asment-simple-fo
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { AsmentReactiveFormComponent } from './asment-reactive-form/asment-reactive-form.component';
 import { AssmentRegistrationFormTDFComponent } from './assment-registration-form-tdf/assment-registration-form-tdf.component';
+import { ServiceComp1Component } from './service-comp1/service-comp1.component';
+import { Servicescomp2Component } from './servicescomp2/servicescomp2.component';
+import {HttpClientModule} from '@angular/common/http';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component'
 
 @NgModule({
   declarations: [
@@ -55,13 +62,20 @@ import { AssmentRegistrationFormTDFComponent } from './assment-registration-form
     AsmentSimpleFormComponent,
     ReactiveformComponent,
     AsmentReactiveFormComponent,
-    AssmentRegistrationFormTDFComponent
+    AssmentRegistrationFormTDFComponent,
+    ServiceComp1Component,
+    Servicescomp2Component,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
