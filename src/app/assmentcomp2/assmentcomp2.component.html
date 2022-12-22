@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h3>Subject assignment comp2 works!</h3>
+        <table class="table caption-top">
+            <thead>
+                <tr>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Employee Name</th>
+                    <th scope="col">Employee Company</th>
+                    <th scope="col">Employee Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employee">
+                    <td>{{emp.empId}}</td>
+                    <td>{{emp.empName}}</td>
+                    <td>{{emp.empCompany}}</td>
+                    <td>{{emp.empSalary}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <small>
+            <button class="btn btn-success" (click)="empDataUpdate()">Update Data</button>
+        </small>
+    </div>
+</div>

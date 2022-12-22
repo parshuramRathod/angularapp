@@ -34,7 +34,11 @@ import {HttpClientModule} from '@angular/common/http';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
-import { Comp4Component } from './comp4/comp4.component'
+import { Comp4Component } from './comp4/comp4.component';
+import { Assmentcomp1Component } from './assmentcomp1/assmentcomp1.component';
+import { Assmentcomp2Component } from './assmentcomp2/assmentcomp2.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe'
 
 @NgModule({
   declarations: [
@@ -68,7 +72,11 @@ import { Comp4Component } from './comp4/comp4.component'
     Comp1Component,
     Comp2Component,
     Comp3Component,
-    Comp4Component
+    Comp4Component,
+    Assmentcomp1Component,
+    Assmentcomp2Component,
+    PipedemoComponent,
+    CountPipe
   ],
   imports: [
     BrowserModule,
