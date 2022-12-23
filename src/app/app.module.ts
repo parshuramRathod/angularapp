@@ -38,7 +38,9 @@ import { Comp4Component } from './comp4/comp4.component';
 import { Assmentcomp1Component } from './assmentcomp1/assmentcomp1.component';
 import { Assmentcomp2Component } from './assmentcomp2/assmentcomp2.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
-import { CountPipe } from './count.pipe'
+import { CountPipe } from './count.pipe';
+import { FilterPipe } from './filter.pipe';
+import { FilpterpipeComponent } from './filpterpipe/filpterpipe.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { CountPipe } from './count.pipe'
     Assmentcomp1Component,
     Assmentcomp2Component,
     PipedemoComponent,
-    CountPipe
+    CountPipe,
+    FilterPipe,
+    FilpterpipeComponent
   ],
   imports: [
     BrowserModule,
