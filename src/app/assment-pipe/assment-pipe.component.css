@@ -1,0 +1,15 @@
+.container{
+    background-color: aquamarine;
+    font-size: large;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    color: brown;
+}
+table{
+    color: blueviolet;
+}
+input{
+    background-color: bisque;
+    color: black;
+}

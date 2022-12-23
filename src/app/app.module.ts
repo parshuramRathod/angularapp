@@ -41,6 +41,9 @@ import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CountPipe } from './count.pipe';
 import { FilterPipe } from './filter.pipe';
 import { FilpterpipeComponent } from './filpterpipe/filpterpipe.component';
+import { AssmentPipeComponent } from './assment-pipe/assment-pipe.component';
+import { GenderPipe } from './gender.pipe';
+import { SearchGenderPipe } from './search-gender.pipe';
 
 @NgModule({
   declarations: [
@@ -80,7 +83,10 @@ import { FilpterpipeComponent } from './filpterpipe/filpterpipe.component';
     PipedemoComponent,
     CountPipe,
     FilterPipe,
-    FilpterpipeComponent
+    FilpterpipeComponent,
+    AssmentPipeComponent,
+    GenderPipe,
+    SearchGenderPipe
   ],
   imports: [
     BrowserModule,

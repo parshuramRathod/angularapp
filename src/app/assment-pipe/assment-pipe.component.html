@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="justify-content-center">
+        <div class="col-md-8 ">
+            <h2 for="gender">Search by Gender </h2>
+            <input type="text" class="form-control" id="gender" placeholder="enter gender to serarch" [(ngModel)]="genderSearch">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>DOB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of employee | searchGender:genderSearch ">
+                        <td scope="row">{{emp.id}}</td>
+                        <td>{{emp.name | gender:emp.gender}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td>{{emp.DOB}}</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
