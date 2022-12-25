@@ -143,6 +143,19 @@
 
 <!-- <app-filpterpipe></app-filpterpipe> -->
 
-<app-assment-pipe></app-assment-pipe>
+<!-- <app-assment-pipe></app-assment-pipe> -->
+
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">login</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="home/">Home </a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active myclass" routerLink="aboutus/">About us </a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active myclass" routerLink="product/">Product</a></li>
+      <li class="nav-item"><a class="nav-link" routerLinkActive="active myclass" routerLink="contactus/">Contact us</a></li>
+
+    </ul>
+  </nav>
+</header>
 
 <router-outlet></router-outlet>

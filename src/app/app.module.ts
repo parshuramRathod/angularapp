@@ -44,6 +44,11 @@ import { FilpterpipeComponent } from './filpterpipe/filpterpipe.component';
 import { AssmentPipeComponent } from './assment-pipe/assment-pipe.component';
 import { GenderPipe } from './gender.pipe';
 import { SearchGenderPipe } from './search-gender.pipe';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ProductComponent } from './product/product.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +91,12 @@ import { SearchGenderPipe } from './search-gender.pipe';
     FilpterpipeComponent,
     AssmentPipeComponent,
     GenderPipe,
-    SearchGenderPipe
+    SearchGenderPipe,
+    AboutusComponent,
+    ProductComponent,
+    ContactusComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
