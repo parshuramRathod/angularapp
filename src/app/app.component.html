@@ -145,7 +145,7 @@
 
 <!-- <app-assment-pipe></app-assment-pipe> -->
 
-<header>
+<!-- <header>
   <nav>
     <ul class="nav nav-tabs">
       <li class="nav-item"><a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">login</a></li>
@@ -156,6 +156,38 @@
 
     </ul>
   </nav>
-</header>
+</header> -->
 
+
+<header>
+  <div class="container">
+    <nav>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">LogIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="assmenthome/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="assmentproduct/">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="assmentaboutus">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="assmentcontactus">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </li>
+          <li class="nav-item">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </li>
+      </ul>
+
+
+    </nav>
+  </div>
+</header>
 <router-outlet></router-outlet>

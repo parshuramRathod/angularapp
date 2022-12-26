@@ -1,0 +1,13 @@
+.container{
+    text-align: center;
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+input{
+    border-radius: 8px;
+    box-shadow: 1px 2px 1px inset;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}

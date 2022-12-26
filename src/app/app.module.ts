@@ -49,6 +49,15 @@ import { ProductComponent } from './product/product.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { TabletComponent } from './product/tablet/tablet.component';
+import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
+import { AssmentloginComponent } from './assmentlogin/assmentlogin.component';
+import { AssmenthomeComponent } from './assmenthome/assmenthome.component';
+import { AssmentaboutusComponent } from './assmentaboutus/assmentaboutus.component';
+import { AssmentproductComponent } from './assmentproduct/assmentproduct.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +105,16 @@ import { LoginComponent } from './login/login.component';
     ProductComponent,
     ContactusComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TvComponent,
+    TabletComponent,
+    WashingmachineComponent,
+    AssmentloginComponent,
+    AssmenthomeComponent,
+    AssmentaboutusComponent,
+    AssmentproductComponent
   ],
   imports: [
     BrowserModule,

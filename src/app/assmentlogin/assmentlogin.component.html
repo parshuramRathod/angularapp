@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row justify-content-center py-6">
+        <div class="col-md-6 mb-4">
+            <h5>Log In form</h5>
+            <form>
+                <div>
+                    <label  for="username">Username</label>
+                    <input #usrName type="text" placeholder="enter User as  username">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input #password type="password" placeholder=" user is password">
+                </div>
+                <div>
+                    <button (click)="checkUser(usrName.value,password.value)" class="btn btn-success"> Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
