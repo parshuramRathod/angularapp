@@ -5,6 +5,8 @@ import { AssmentaboutusComponent } from './assmentaboutus/assmentaboutus.compone
 import { AssmenthomeComponent } from './assmenthome/assmenthome.component';
 import { AssmentloginComponent } from './assmentlogin/assmentlogin.component';
 import { AssmentproductComponent } from './assmentproduct/assmentproduct.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 // import { ContactusComponent } from './contactus/contactus.component';
 // import { HomeComponent } from './home/home.component';
 // import { LoginComponent } from './login/login.component';
@@ -42,6 +44,9 @@ const routes: Routes = [
   { path: 'assmentproduct', component: AssmentproductComponent },
   { path: 'assmentaboutus', component: AssmentaboutusComponent },
   { path: 'assmenthome', component: AssmenthomeComponent },
+
+  {path:'post',component:DemopostComponent},
+  {path:'postdetails/:id',component:PostdetailsComponent}
   // {path:'**',component:PagenotfoundComponent}
 
 ];

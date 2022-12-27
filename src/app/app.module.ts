@@ -58,6 +58,8 @@ import { AssmentloginComponent } from './assmentlogin/assmentlogin.component';
 import { AssmenthomeComponent } from './assmenthome/assmenthome.component';
 import { AssmentaboutusComponent } from './assmentaboutus/assmentaboutus.component';
 import { AssmentproductComponent } from './assmentproduct/assmentproduct.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 
 @NgModule({
   declarations: [
@@ -114,7 +116,9 @@ import { AssmentproductComponent } from './assmentproduct/assmentproduct.compone
     AssmentloginComponent,
     AssmenthomeComponent,
     AssmentaboutusComponent,
-    AssmentproductComponent
+    AssmentproductComponent,
+    DemopostComponent,
+    PostdetailsComponent
   ],
   imports: [
     BrowserModule,
