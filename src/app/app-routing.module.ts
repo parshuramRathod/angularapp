@@ -10,7 +10,7 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
 // import { ContactusComponent } from './contactus/contactus.component';
 // import { HomeComponent } from './home/home.component';
 // import { LoginComponent } from './login/login.component';
-// import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 // import { LaptopComponent } from './product/laptop/laptop.component';
 // import { ProductComponent } from './product/product.component';
 // import { TabletComponent } from './product/tablet/tablet.component';
@@ -25,7 +25,7 @@ const routes: Routes = [
   // { path: 'aboutus', component: AboutusComponent }, // localhost:4200//aboutus
   // { path: 'product', component:ProductComponent,
   //  children: [
-  //     // { path: '', component: ProductComponent },
+  //     { path: '', component: ProductComponent },
   //     { path: 'laptop', component: LaptopComponent },
   //     { path: 'tablet', component: TabletComponent },
   //     { path: 'tv', component: TvComponent },
@@ -37,7 +37,7 @@ const routes: Routes = [
   // { path: 'contactus', component: ContactusComponent },
   // { path: '**', component: PagenotfoundComponent } // wild card component always last component
 
-  //assignment work
+  // assignment work
   {path:"", redirectTo:"assmentlogin",pathMatch:'full'},
   { path: 'assmentlogin', component: AssmentloginComponent },
   { path: 'assmenthome', component: AssmenthomeComponent },
@@ -46,8 +46,8 @@ const routes: Routes = [
   { path: 'assmenthome', component: AssmenthomeComponent },
 
   {path:'post',component:DemopostComponent},
-  {path:'postdetails/:id',component:PostdetailsComponent}
-  // {path:'**',component:PagenotfoundComponent}
+  {path:'postdetails/:id',component:PostdetailsComponent},
+  {path:'**',component:PagenotfoundComponent}
 
 ];
 
