@@ -13,7 +13,6 @@ import { DemodirectivesComponent } from './demodirectives/demodirectives.compone
 import { AsmentStructralDerectivesComponent } from './asment-structral-derectives/asment-structral-derectives.component';
 import { PracticeComponent } from './practice/practice.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
-import { CustdirDirective } from './custdir.directive';
 import { PasswordConfirmComponent } from './password-confirm/password-confirm.component';
 import { ParentCompComponent } from './parent-comp/parent-comp.component';
 import { ChildCompComponent } from './child-comp/child-comp.component';
@@ -30,7 +29,7 @@ import { AsmentReactiveFormComponent } from './asment-reactive-form/asment-react
 import { AssmentRegistrationFormTDFComponent } from './assment-registration-form-tdf/assment-registration-form-tdf.component';
 import { ServiceComp1Component } from './service-comp1/service-comp1.component';
 import { Servicescomp2Component } from './servicescomp2/servicescomp2.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
@@ -45,15 +44,10 @@ import { AssmentPipeComponent } from './assment-pipe/assment-pipe.component';
 import { GenderPipe } from './gender.pipe';
 import { SearchGenderPipe } from './search-gender.pipe';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { ProductComponent } from './product/product.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TvComponent } from './product/tv/tv.component';
-import { TabletComponent } from './product/tablet/tablet.component';
-import { WashingmachineComponent } from './product/washingmachine/washingmachine.component';
 import { AssmentloginComponent } from './assmentlogin/assmentlogin.component';
 import { AssmenthomeComponent } from './assmenthome/assmenthome.component';
 import { AssmentaboutusComponent } from './assmentaboutus/assmentaboutus.component';
@@ -73,7 +67,6 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     AsmentStructralDerectivesComponent,
     PracticeComponent,
     AttributeDirectiveComponent,
-    CustdirDirective,
     PasswordConfirmComponent,
     ParentCompComponent,
     ChildCompComponent,
@@ -104,15 +97,10 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     GenderPipe,
     SearchGenderPipe,
     AboutusComponent,
-    ProductComponent,
     ContactusComponent,
     HomeComponent,
     LoginComponent,
     PagenotfoundComponent,
-    LaptopComponent,
-    TvComponent,
-    TabletComponent,
-    WashingmachineComponent,
     AssmentloginComponent,
     AssmenthomeComponent,
     AssmentaboutusComponent,
@@ -130,4 +118,9 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    console.log('AppModule called');
+
+  }
+}

@@ -12,9 +12,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-// checkuser(uname,password){
-//   if(uname=='admin' && password=='admin'){
-// this._route.navigate(['product/laptop'])
-//   }
-// }
+checkuser(uname,password){
+  if(uname=='admin' && password=='admin'){
+this._route.navigate(['product/laptop'])
+  }
+}
 }
