@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,22 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _route: Router) { }
+  constructor(private _route: Router, private _authServices:AuthService) { }
 
   ngOnInit() {
   }
 checkuser(uname,password){
-  if(uname=='admin' && password=='admin'){
-this._route.navigate(['product/laptop'])
-  }
+
+var output = this._authServices.checkUserNameandPassword(uname,password);
+if (output==true) {
+  window.alert('Login succesfully');
+  this._route.navigate(['product'])
+} else{
+  window.alert('Invalid username and password');
+}
+  
+//   if(uname=='admin' && password=='admin'){
+// this._route.navigate(['product/laptop'])
+//   }
 }
 }

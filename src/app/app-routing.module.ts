@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { AuthGuard } from './auth.guard';
 // import { AssmentaboutusComponent } from './assmentaboutus/assmentaboutus.component';
 // import { AssmenthomeComponent } from './assmenthome/assmenthome.component';
 // import { AssmentloginComponent } from './assmentlogin/assmentlogin.component';
@@ -11,6 +13,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UnSavedChangesGuard } from './un-saved-changes.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -19,7 +22,8 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent }, // localhost:4200//aboutus
 
   { path: 'contactus', component: ContactusComponent },
-  { path: 'product', loadChildren: './product/products.module#ProductsModule' },//lazy loading syntax
+  {path:'adduser',component:AdduserComponent,canDeactivate:[UnSavedChangesGuard]},
+  { path: 'product', canActivate:[AuthGuard], loadChildren: './product/products.module#ProductsModule' },//lazy loading syntax
   { path: 'orders', loadChildren: './orders/orders.module#OrdersModule' },
   { path: '**', component: PagenotfoundComponent } // wild card component always last component
 

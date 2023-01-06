@@ -54,6 +54,7 @@ import { AssmentaboutusComponent } from './assmentaboutus/assmentaboutus.compone
 import { AssmentproductComponent } from './assmentproduct/assmentproduct.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { AdduserComponent } from './adduser/adduser.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     AssmentaboutusComponent,
     AssmentproductComponent,
     DemopostComponent,
-    PostdetailsComponent
+    PostdetailsComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,
