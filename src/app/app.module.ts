@@ -55,6 +55,7 @@ import { AssmentproductComponent } from './assmentproduct/assmentproduct.compone
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { RapidapiComponent } from './rapidapi/rapidapi.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,8 @@ import { AdduserComponent } from './adduser/adduser.component';
     AssmentproductComponent,
     DemopostComponent,
     PostdetailsComponent,
-    AdduserComponent
+    AdduserComponent,
+    RapidapiComponent
   ],
   imports: [
     BrowserModule,
